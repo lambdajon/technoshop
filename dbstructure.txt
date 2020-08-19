@@ -1,0 +1,70 @@
+
+
+Users
+  id uuid
+  email string
+  firstName string
+  lastName string
+  phoneNumber string
+  verfy boolean
+  createdAt date
+  updatdAt date
+
+Categories
+  id uuid
+  name string
+  parentId uuid // parent category id
+  createdAt date
+  updatdAt date
+
+Brands/Companies
+  id uuid
+  name string
+  logo
+  createdAt date
+  updatdAt date
+
+Products
+  id uuid
+  title string
+  description string
+  brand uuid // id of brands
+  model string
+  price number
+  discount number
+  isNew boolean
+  images 
+    url string
+    cover boolean
+  info object
+    ....
+  createdAt date
+  updatdAt date
+
+Reviews
+  id uuid
+  authorId  uuid // id of user
+  text string
+  productId // id of product
+  createdAt date
+  updatdAt date
+
+Tags
+  id uuid
+  name string
+  createdAt date
+  updatdAt date
+
+Trashes
+  id uuid
+  userId uuid // uuid of user
+  productId uuid // uuid of product
+  createdAt date
+  updatdAt date
+
+UserProducts
+  id uuid
+  userId uuid // uuid of user
+  productId uuid // uuid of product
+  createdAt date
+  updatdAt date
